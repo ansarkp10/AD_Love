@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Devu - My Eternal Love ❤️</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-pink: #ff6b8b;
+            --light-pink: #ffccd5;
+            --deep-pink: #ff4d6d;
+            --gold: #ffd166;
+            --white: #fff9f9;
+            --shadow: rgba(255, 107, 139, 0.2);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fff0f3 0%, #ffe5ec 100%);
+            color: #5a3d5c;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(255, 182, 193, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 105, 180, 0.2) 0%, transparent 50%);
+            z-index: -1;
+        }
+        
+        /* Envelope Opening Animation */
+        .envelope-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-pink), var(--deep-pink));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: transform 1.5s ease;
+        }
+        
+        .envelope {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            cursor: pointer;
+        }
+        
+        .envelope-front {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-bottom: 100px solid var(--light-pink);
+            top: 0;
+        }
+        
+        .envelope-back {
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            background: var(--white);
+            top: 100px;
+            box-shadow: 0 5px 20px var(--shadow);
+            border-radius: 0 0 10px 10px;
+        }
+        
+        .envelope-flap {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-top: 120px solid var(--primary-pink);
+            top: -20px;
+            transform-origin: top;
+            transition: transform 0.8s ease;
+        }
+        
+        .envelope:hover .envelope-flap {
+            transform: rotateX(180deg);
+        }
+        
+        .envelope-heart {
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 50px;
+            color: var(--deep-pink);
+            z-index: 2;
+            animation: pulse 2s infinite;
+        }
+        
+        .envelope-text {
+            color: white;
+            margin-top: 30px;
+            font-size: 1.5rem;
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .open-instruction {
+            position: absolute;
+            bottom: 50px;
+            color: white;
+            font-size: 1.2rem;
+            opacity: 0.8;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.1); }
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: none;
+        }
+        
+        /* Header with Rose Petals */
+        .header {
+            text-align: center;
+            padding: 80px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .rose-petals {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        
+        .petal {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-pink);
+            border-radius: 50% 0 50% 50%;
+            opacity: 0.7;
+            animation: falling 15s infinite linear;
+        }
+        
+        @keyframes falling {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .birthday-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 5rem;
+            color: var(--deep-pink);
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 0 var(--light-pink);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .birthday-title::after {
+            content: '❤️';
+            position: absolute;
+            right: -40px;
+            top: -10px;
+            font-size: 2.5rem;
+            animation: heartbeat 1.2s infinite;
+        }
+        
+        .devu-name {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4.5rem;
+            color: var(--primary-pink);
+            background: linear-gradient(45deg, var(--primary-pink), var(--deep-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 10px 0;
+            position: relative;
+        }
+        
+        .devu-name::before, .devu-name::after {
+            content: '✦';
+            position: absolute;
+            color: var(--gold);
+            font-size: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .devu-name::before {
+            left: -50px;
+        }
+        
+        .devu-name::after {
+            right: -50px;
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+        
+        /* Love Story Timeline */
+        .timeline {
+            max-width: 900px;
+            margin: 60px auto;
+            position: relative;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary-pink), var(--deep-pink));
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            margin: 40px 0;
+            position: relative;
+            width: 45%;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            margin-left: 55%;
+        }
+        
+        .timeline-item:nth-child(even) {
+            margin-left: 0;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px var(--shadow);
+            position: relative;
+            border-left: 5px solid var(--primary-pink);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            border-left: none;
+            border-right: 5px solid var(--deep-pink);
+        }
+        
+        .timeline-date {
+            background: linear-gradient(45deg, var(--primary-pink), var(--deep-pink));
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--deep-pink);
+            box-shadow: 0 5px 15px var(--shadow);
+            top: 0;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-icon {
+            left: -85px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-icon {
+            right: -85px;
+        }
+        
+        /* Love Letter in Bottle */
+        .message-in-bottle {
+            background: linear-gradient(135deg, #e6f7ff 0%, #f0e6ff 100%);
+            border-radius: 30px;
+            padding: 50px;
+            margin: 80px auto;
+            max-width: 800px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(255, 107, 139, 0.15);
+        }
+        
+        .bottle-top {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 40px;
+            background: var(--gold);
+            border-radius: 10px;
+            z-index: 2;
+        }
+        
+        .bottle-neck {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 60px;
+            background: rgba(173, 216, 230, 0.8);
+            border-radius: 10px;
+            z-index: 1;
+        }
+        
+        .message-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 40px;
+            position: relative;
+            z-index: 3;
+            border: 2px dashed var(--light-pink);
+        }
+        
+        .message-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-family: 'Dancing Script', cursive;
+            color: #5a3d5c;
+        }
+        
+        /* Photo Gallery with Polaroid Effect */
+        .gallery-title {
+            text-align: center;
+            font-size: 3rem;
+            color: var(--deep-pink);
+            margin: 60px 0 40px;
+            font-family: 'Great Vibes', cursive;
+        }
+        
+        .polaroid-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            padding: 20px;
+        }
+        
+        .polaroid {
+            background: white;
+            padding: 15px 15px 60px;
+            border-radius: 5px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transform: rotate(var(--rotation));
+            transition: transform 0.5s ease;
+            position: relative;
+        }
+        
+        .polaroid:hover {
+            transform: rotate(0deg) scale(1.05);
+            z-index: 10;
+        }
+        
+        .polaroid:nth-child(odd) {
+            --rotation: -3deg;
+        }
+        
+        .polaroid:nth-child(even) {
+            --rotation: 3deg;
+        }
+        
+        .photo-placeholder {
+            height: 250px;
+            background: linear-gradient(45deg, var(--light-pink), #ffe5ec);
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--primary-pink);
+            overflow: hidden;
+        }
+        
+        .photo-caption {
+            text-align: center;
+            margin-top: 15px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: var(--deep-pink);
+            font-weight: bold;
+        }
+        
+        /* Love Meter */
+        .love-meter {
+            max-width: 600px;
+            margin: 80px auto;
+            text-align: center;
+            padding: 40px;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px var(--shadow);
+        }
+        
+        .meter-title {
+            font-size: 2.5rem;
+            color: var(--deep-pink);
+            margin-bottom: 30px;
+            font-family: 'Great Vibes', cursive;
+        }
+        
+        .meter-container {
+            height: 40px;
+            background: var(--light-pink);
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .meter-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-pink), var(--deep-pink));
+            width: 0;
+            border-radius: 20px;
+            transition: width 3s ease;
+            position: relative;
+        }
+        
+        .meter-fill::after {
+            content: '∞';
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .meter-text {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--deep-pink);
+            margin-top: 20px;
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        /* Interactive Love Notes */
+        .love-notes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 60px 0;
+        }
+        
+        .note {
+            background: linear-gradient(135deg, #fff9c4, #ffecb3);
+            padding: 25px;
+            border-radius: 10px;
+            transform: rotate(-2deg);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            min-height: 200px;
+            border: 1px solid var(--gold);
+        }
+        
+        .note:nth-child(even) {
+            transform: rotate(2deg);
+            background: linear-gradient(135deg, #e1f5fe, #b3e5fc);
+        }
+        
+        .note:hover {
+            transform: rotate(0deg) scale(1.05);
+            z-index: 5;
+        }
+        
+        .note-pin {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--primary-pink);
+            border-radius: 50%;
+        }
+        
+        .note-content {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.4rem;
+            color: #5a3d5c;
+            line-height: 1.6;
+        }
+        
+        /* Footer with Fireworks */
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .fireworks {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        
+        .firework {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            animation: explode 1.5s infinite;
+        }
+        
+        @keyframes explode {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 0;
+            }
+        }
+        
+        .final-message {
+            font-size: 2.5rem;
+            color: var(--deep-pink);
+            margin-bottom: 30px;
+            font-family: 'Great Vibes', cursive;
+        }
+        
+        .kiss-signature {
+            font-size: 3.5rem;
+            color: var(--primary-pink);
+            animation: float 3s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        /* Music Player */
+        .music-player {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            background: white;
+            padding: 15px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .play-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary-pink), var(--deep-pink));
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .play-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .song-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.2rem;
+            color: var(--deep-pink);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .birthday-title {
+                font-size: 3.5rem;
+            }
+            
+            .devu-name {
+                font-size: 3rem;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                width: 85%;
+                margin-left: 15% !important;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-icon {
+                left: -65px;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-icon {
+                left: -65px;
+                right: auto;
+            }
+            
+            .message-in-bottle {
+                padding: 30px 20px;
+            }
+            
+            .music-player {
+                bottom: 20px;
+                right: 20px;
+                left: 20px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Envelope Opening Screen -->
+    <div class="envelope-container" id="envelopeContainer">
+        <div class="envelope" id="envelope">
+            <div class="envelope-flap"></div>
+            <div class="envelope-front"></div>
+            <div class="envelope-back"></div>
+            <div class="envelope-heart">💌</div>
+        </div>
+        <div class="envelope-text">A Special Birthday Message for Devu</div>
+        <div class="open-instruction">Click the envelope to open</div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container" id="mainContent">
+        <!-- Header with Rose Petals -->
+        <header class="header">
+            <div class="rose-petals" id="rosePetals"></div>
+            <h1 class="birthday-title">Happy Birthday</h1>
+            <h2 class="devu-name">My Devu</h2>
+            <p class="subtitle">To the woman who makes every moment magical</p>
+            <div style="font-size: 2rem; margin-top: 20px;">
+                <span class="heart" style="animation-delay: 0s">❤️</span>
+                <span class="heart" style="animation-delay: 0.2s">💖</span>
+                <span class="heart" style="animation-delay: 0.4s">💕</span>
+                <span class="heart" style="animation-delay: 0.6s">💗</span>
+                <span class="heart" style="animation-delay: 0.8s">💓</span>
+            </div>
+        </header>
+        
+        <!-- Love Story Timeline -->
+        <section class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon">💫</div>
+                <div class="timeline-content">
+                    <div class="timeline-date">The Day We Met</div>
+                    <h3>My Universe Changed</h3>
+                    <p>The moment our eyes met, I knew my life would never be the same. Your smile became my favorite sight, your voice my favorite sound.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-icon">🌹</div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Our First Date</div>
+                    <h3>Butterflies Forever</h3>
+                    <p>That evening when time stood still. Every laugh, every glance, every word - they're all etched permanently in my heart.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-icon">⭐</div>
+                <div class="timeline-content">
+                    <div class="timeline-date">When I Knew</div>
+                    <h3>You're My Always</h3>
+                    <p>The way you look at me, the way you understand my silence, the way you fit perfectly into my life - that's when I knew you were my forever.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-icon">🎂</div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Today</div>
+                    <h3>Celebrating You</h3>
+                    <p>On your special day, I celebrate the incredible woman you are. Every day with you is a gift, but today is extra special because it's the day you came into this world.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Love Letter in Bottle -->
+        <section class="message-in-bottle">
+            <div class="bottle-top"></div>
+            <div class="bottle-neck"></div>
+            <div class="message-content">
+                <p>My Dearest Devu,</p>
+                <p>As I write this message to you on your special day, my heart overflows with emotions that words can barely capture. You are the melody in my silence, the color in my world, the peace in my chaos.</p>
+                <p>Every morning I wake up grateful that you exist. Every night I fall asleep dreaming of your smile. Your kindness touches everyone around you, your strength inspires me, and your love completes me.</p>
+                <p>Today, on your birthday, I want you to know that my love for you grows deeper with each passing moment. You're not just my girlfriend - you're my best friend, my confidant, my home.</p>
+                <p>Happy Birthday to the woman who makes my world beautiful just by being in it. May your day be as radiant as your smile, as sweet as your laughter, and as magical as your love.</p>
+                <p style="text-align: right; margin-top: 30px;">
+                    Forever and Always,<br>
+                    <span style="font-size: 1.8rem; color: var(--deep-pink);">Your Love</span>
+                </p>
+            </div>
+        </section>
+        
+        <!-- Photo Gallery -->
+        <h2 class="gallery-title">Our Beautiful Memories</h2>
+        <div class="polaroid-gallery">
+            <div class="polaroid">
+                <div class="photo-placeholder">📸</div>
+                <div class="photo-caption">Our First Picture</div>
+            </div>
+            <div class="polaroid">
+                <div class="photo-placeholder">🌅</div>
+                <div class="photo-caption">Sunset Moments</div>
+            </div>
+            <div class="polaroid">
+                <div class="photo-placeholder">🎉</div>
+                <div class="photo-caption">Celebrations</div>
+            </div>
+            <div class="polaroid">
+                <div class="photo-placeholder">🤗</div>
+                <div class="photo-caption">Everyday Love</div>
+            </div>
+        </div>
+        
+        <!-- Love Meter -->
+        <section class="love-meter">
+            <h2 class="meter-title">My Love for Devu</h2>
+            <p>Measured in infinity and beyond</p>
+            <div class="meter-container">
+                <div class="meter-fill" id="loveMeter"></div>
+            </div>
+            <div class="meter-text" id="loveText">Calculating infinite love...</div>
+        </section>
+        
+        <!-- Love Notes -->
+        <div class="love-notes">
+            <div class="note">
+                <div class="note-pin"></div>
+                <div class="note-content">"Your smile is my favorite sunrise"</div>
+            </div>
+            <div class="note">
+                <div class="note-pin"></div>
+                <div class="note-content">"Every moment with you is precious"</div>
+            </div>
+            <div class="note">
+                <div class="note-pin"></div>
+                <div class="note-content">"You make my heart skip beats"</div>
+            </div>
+            <div class="note">
+                <div class="note-pin"></div>
+                <div class="note-content">"My love for you is endless"</div>
+            </div>
+        </div>
+        
+        <!-- Footer with Fireworks -->
+        <footer>
+            <div class="fireworks" id="fireworks"></div>
+            <div class="final-message">Happy Birthday, My Beautiful Devu!</div>
+            <div class="kiss-signature">💋</div>
+            <p style="margin-top: 20px; font-size: 1.2rem; color: var(--primary-pink);">
+                Made with infinite love for the most special person in my universe
+            </p>
+        </footer>
+        
+        <!-- Music Player -->
+        <div class="music-player">
+            <button class="play-btn" id="playBtn">
+                <i class="fas fa-play"></i>
+            </button>
+            <div class="song-title">"Perfect" - Our Song</div>
+            <audio id="birthdaySong" loop>
+                <source src="https://assets.codepen.io/1468070/perfect.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+    <script>
+        // Envelope Opening
+        const envelopeContainer = document.getElementById('envelopeContainer');
+        const envelope = document.getElementById('envelope');
+        const mainContent = document.getElementById('mainContent');
+        
+        envelope.addEventListener('click', function() {
+            // Animate envelope opening
+            this.style.transform = 'scale(1.5) rotate(10deg)';
+            this.style.opacity = '0';
+            
+            // Remove envelope after animation
+            setTimeout(() => {
+                envelopeContainer.style.transform = 'translateY(-100%)';
+                
+                // Show main content
+                setTimeout(() => {
+                    envelopeContainer.style.display = 'none';
+                    mainContent.style.display = 'block';
+                    document.body.style.background = 'linear-gradient(135deg, #fff0f3 0%, #ffe5ec 100%)';
+                    
+                    // Initialize all effects
+                    initRosePetals();
+                    initFireworks();
+                    startLoveMeter();
+                    createFloatingHearts();
+                }, 500);
+            }, 800);
+        });
+        
+        // Create Rose Petals
+        function initRosePetals() {
+            const rosePetals = document.getElementById('rosePetals');
+            const petalCount = 30;
+            
+            for (let i = 0; i < petalCount; i++) {
+                const petal = document.createElement('div');
+                petal.className = 'petal';
+                petal.style.left = Math.random() * 100 + 'vw';
+                petal.style.animationDelay = Math.random() * 15 + 's';
+                petal.style.background = `hsl(${Math.random() * 20 + 340}, 100%, 70%)`;
+                petal.style.width = Math.random() * 15 + 10 + 'px';
+                petal.style.height = petal.style.width;
+                rosePetals.appendChild(petal);
+            }
+        }
+        
+        // Create Fireworks
+        function initFireworks() {
+            const fireworks = document.getElementById('fireworks');
+            const fireworkCount = 50;
+            
+            for (let i = 0; i < fireworkCount; i++) {
+                const firework = document.createElement('div');
+                firework.className = 'firework';
+                firework.style.left = Math.random() * 100 + 'vw';
+                firework.style.animationDelay = Math.random() * 3 + 's';
+                firework.style.background = `hsl(${Math.random() * 360}, 100%, 65%)`;
+                fireworks.appendChild(firework);
+            }
+        }
+        
+        // Love Meter Animation
+        function startLoveMeter() {
+            const meterFill = document.getElementById('loveMeter');
+            const loveText = document.getElementById('loveText');
+            
+            let width = 0;
+            const interval = setInterval(() => {
+                width += 1;
+                meterFill.style.width = width + '%';
+                
+                if (width === 33) loveText.textContent = "Like the deepest ocean...";
+                if (width === 66) loveText.textContent = "Like the brightest star...";
+                if (width === 99) loveText.textContent = "Infinite and Eternal ❤️";
+                
+                if (width >= 100) {
+                    clearInterval(interval);
+                    // Keep it at 100% but show overflow effect
+                    setTimeout(() => {
+                        meterFill.style.width = '100%';
+                        loveText.innerHTML = "My Love for Devu: <span style='font-size: 2.5rem;'>∞</span>";
+                    }, 100);
+                }
+            }, 30);
+        }
+        
+        // Create Floating Hearts
+        function createFloatingHearts() {
+            const hearts = ['❤️', '💖', '💕', '💗', '💓', '💞', '💝'];
+            
+            setInterval(() => {
+                const heart = document.createElement('div');
+                heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.position = 'fixed';
+                heart.style.fontSize = Math.random() * 20 + 20 + 'px';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.top = '100vh';
+                heart.style.zIndex = '9999';
+                heart.style.pointerEvents = 'none';
+                heart.style.opacity = '0.7';
+                heart.style.animation = `float ${Math.random() * 5 + 5}s linear forwards`;
+                
+                document.body.appendChild(heart);
+                
+                // Remove after animation
+                setTimeout(() => {
+                    heart.remove();
+                }, 6000);
+            }, 300);
+        }
+        
+        // Music Player
+        const playBtn = document.getElementById('playBtn');
+        const birthdaySong = document.getElementById('birthdaySong');
+        let isPlaying = false;
+        
+        playBtn.addEventListener('click', function() {
+            if (isPlaying) {
+                birthdaySong.pause();
+                this.innerHTML = '<i class="fas fa-play"></i>';
+            } else {
+                birthdaySong.play().catch(e => {
+                    // If autoplay is blocked, show message
+                    this.innerHTML = '<i class="fas fa-volume-mute"></i>';
+                    this.title = "Click to unmute, then press play";
+                });
+                this.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+            isPlaying = !isPlaying;
+        });
+        
+        // Note click effect
+        document.querySelectorAll('.note').forEach(note => {
+            note.addEventListener('click', function() {
+                this.style.transform = 'rotate(0deg) scale(1.1)';
+                this.style.boxShadow = '0 20px 40px rgba(255, 107, 139, 0.3)';
+                
+                setTimeout(() => {
+                    this.style.transform = 'rotate(0deg) scale(1.05)';
+                    this.style.boxShadow = '0 15px 30px rgba(255, 107, 139, 0.2)';
+                }, 300);
+            });
+        });
+        
+        // Polaroid hover enhancement
+        document.querySelectorAll('.polaroid').forEach(polaroid => {
+            polaroid.addEventListener('mouseenter', function() {
+                this.style.zIndex = '100';
+            });
+            
+            polaroid.addEventListener('mouseleave', function() {
+                setTimeout(() => {
+                    this.style.zIndex = '1';
+                }, 500);
+            });
+        });
+        
+        // Add CSS for floating hearts animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                to {
+                    transform: translateY(-100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
