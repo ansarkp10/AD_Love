@@ -14,6 +14,8 @@
             --gold: #ffd166;
             --white: #fff9f9;
             --shadow: rgba(255, 107, 139, 0.2);
+            --morning-blue: #89CFF0;
+            --night-purple: #9370DB;
         }
         
         * {
@@ -322,6 +324,140 @@
         
         .timeline-item:nth-child(even) .timeline-icon {
             right: -85px;
+        }
+        
+        /* Special Section: Good Morning & Good Night */
+        .daily-rituals {
+            background: linear-gradient(135deg, #e6f7ff 0%, #f0e6ff 100%);
+            border-radius: 30px;
+            padding: 50px;
+            margin: 80px auto;
+            max-width: 800px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(255, 107, 139, 0.15);
+        }
+        
+        .rituals-title {
+            text-align: center;
+            font-size: 3rem;
+            color: var(--deep-pink);
+            margin-bottom: 40px;
+            font-family: 'Great Vibes', cursive;
+        }
+        
+        .rituals-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .morning-card, .night-card {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .morning-card:hover, .night-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .morning-card {
+            border-top: 5px solid var(--morning-blue);
+        }
+        
+        .night-card {
+            border-top: 5px solid var(--night-purple);
+        }
+        
+        .ritual-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+            text-align: center;
+        }
+        
+        .morning-icon {
+            color: var(--morning-blue);
+        }
+        
+        .night-icon {
+            color: var(--night-purple);
+        }
+        
+        .ritual-title {
+            font-size: 1.8rem;
+            color: var(--deep-pink);
+            margin-bottom: 15px;
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .ritual-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #5a3d5c;
+            text-align: center;
+        }
+        
+        /* She Knows Me Well Section */
+        .knows-me-well {
+            background: linear-gradient(135deg, var(--light-pink), #ffe5ec);
+            border-radius: 30px;
+            padding: 50px;
+            margin: 80px auto;
+            max-width: 800px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(255, 107, 139, 0.15);
+        }
+        
+        .knows-title {
+            text-align: center;
+            font-size: 3rem;
+            color: var(--deep-pink);
+            margin-bottom: 40px;
+            font-family: 'Great Vibes', cursive;
+        }
+        
+        .knowledge-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        
+        .knowledge-item {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid var(--primary-pink);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .knowledge-item:hover {
+            transform: scale(1.05);
+            background: white;
+            box-shadow: 0 15px 30px rgba(255, 107, 139, 0.2);
+        }
+        
+        .knowledge-icon {
+            font-size: 2.5rem;
+            color: var(--deep-pink);
+            margin-bottom: 15px;
+        }
+        
+        .knowledge-text {
+            font-size: 1.2rem;
+            color: #5a3d5c;
+            font-family: 'Dancing Script', cursive;
         }
         
         /* Love Letter in Bottle */
@@ -666,8 +802,18 @@
                 right: auto;
             }
             
-            .message-in-bottle {
+            .message-in-bottle,
+            .daily-rituals,
+            .knows-me-well {
                 padding: 30px 20px;
+            }
+            
+            .rituals-container {
+                flex-direction: column;
+            }
+            
+            .morning-card, .night-card {
+                min-width: 100%;
             }
             
             .music-player {
@@ -721,11 +867,11 @@
             </div>
             
             <div class="timeline-item">
-                <div class="timeline-icon">🌹</div>
+                <div class="timeline-icon">🌌</div>
                 <div class="timeline-content">
-                    <div class="timeline-date">Our First Date</div>
-                    <h3>Butterflies Forever</h3>
-                    <p>That evening when time stood still. Every laugh, every glance, every word - they're all etched permanently in my heart.</p>
+                    <div class="timeline-date">Our Connection</div>
+                    <h3>You Understand Me Perfectly</h3>
+                    <p>The way you know exactly what I'm feeling without me saying a word. You understand my silence, my moods, my heart like no one else ever could.</p>
                 </div>
             </div>
             
@@ -748,6 +894,53 @@
             </div>
         </section>
         
+        <!-- Daily Rituals: Good Morning & Good Night -->
+        <section class="daily-rituals">
+            <h2 class="rituals-title">Our Daily Rituals</h2>
+            <div class="rituals-container">
+                <div class="morning-card">
+                    <div class="ritual-icon morning-icon">🌅</div>
+                    <h3 class="ritual-title">Good Morning, My Love</h3>
+                    <p class="ritual-text">Every morning starts with your sweet "Good Morning" message. It's the sunshine that brightens my entire day, the promise that today will be beautiful because you're in it.</p>
+                    <p class="ritual-text" style="margin-top: 15px; font-style: italic; color: var(--morning-blue);">
+                        "Waking up to your message is my favorite part of every morning"
+                    </p>
+                </div>
+                
+                <div class="night-card">
+                    <div class="ritual-icon night-icon">🌙</div>
+                    <h3 class="ritual-title">Good Night, My Heart</h3>
+                    <p class="ritual-text">Every night ends with your loving "Good Night" wish. It's the lullaby that brings peaceful dreams, the comfort that lets me sleep knowing I'm loved by you.</p>
+                    <p class="ritual-text" style="margin-top: 15px; font-style: italic; color: var(--night-purple);">
+                        "Your good night message is the sweetest ending to my day"
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- She Knows Me Well Section -->
+        <section class="knows-me-well">
+            <h2 class="knows-title">You Know Me So Well</h2>
+            <div class="knowledge-list">
+                <div class="knowledge-item" onclick="showKnowledgeMessage(1)">
+                    <div class="knowledge-icon">😊</div>
+                    <p class="knowledge-text">You know my smiles, even the fake ones</p>
+                </div>
+                <div class="knowledge-item" onclick="showKnowledgeMessage(2)">
+                    <div class="knowledge-icon">🤫</div>
+                    <p class="knowledge-text">You understand my silence</p>
+                </div>
+                <div class="knowledge-item" onclick="showKnowledgeMessage(3)">
+                    <div class="knowledge-icon">❤️</div>
+                    <p class="knowledge-text">You feel what my heart says</p>
+                </div>
+                <div class="knowledge-item" onclick="showKnowledgeMessage(4)">
+                    <div class="knowledge-icon">🤗</div>
+                    <p class="knowledge-text">You know when I need a hug</p>
+                </div>
+            </div>
+        </section>
+        
         <!-- Love Letter in Bottle -->
         <section class="message-in-bottle">
             <div class="bottle-top"></div>
@@ -756,6 +949,7 @@
                 <p>My Dearest Devu,</p>
                 <p>As I write this message to you on your special day, my heart overflows with emotions that words can barely capture. You are the melody in my silence, the color in my world, the peace in my chaos.</p>
                 <p>Every morning I wake up grateful that you exist. Every night I fall asleep dreaming of your smile. Your kindness touches everyone around you, your strength inspires me, and your love completes me.</p>
+                <p>The way you say "Good Morning" and "Good Night" every single day shows how much you care. You understand me better than I understand myself.</p>
                 <p>Today, on your birthday, I want you to know that my love for you grows deeper with each passing moment. You're not just my girlfriend - you're my best friend, my confidant, my home.</p>
                 <p>Happy Birthday to the woman who makes my world beautiful just by being in it. May your day be as radiant as your smile, as sweet as your laughter, and as magical as your love.</p>
                 <p style="text-align: right; margin-top: 30px;">
@@ -770,19 +964,19 @@
         <div class="polaroid-gallery">
             <div class="polaroid">
                 <div class="photo-placeholder">📸</div>
-                <div class="photo-caption">Our First Picture</div>
+                <div class="photo-caption">My Beautiful Devu</div>
             </div>
             <div class="polaroid">
                 <div class="photo-placeholder">🌅</div>
-                <div class="photo-caption">Sunset Moments</div>
+                <div class="photo-caption">Morning Smiles</div>
             </div>
             <div class="polaroid">
-                <div class="photo-placeholder">🎉</div>
-                <div class="photo-caption">Celebrations</div>
+                <div class="photo-placeholder">🌙</div>
+                <div class="photo-caption">Night Whispers</div>
             </div>
             <div class="polaroid">
                 <div class="photo-placeholder">🤗</div>
-                <div class="photo-caption">Everyday Love</div>
+                <div class="photo-caption">Understanding</div>
             </div>
         </div>
         
@@ -800,15 +994,15 @@
         <div class="love-notes">
             <div class="note">
                 <div class="note-pin"></div>
-                <div class="note-content">"Your smile is my favorite sunrise"</div>
+                <div class="note-content">"Your Good Morning messages are my sunrise"</div>
             </div>
             <div class="note">
                 <div class="note-pin"></div>
-                <div class="note-content">"Every moment with you is precious"</div>
+                <div class="note-content">"You understand my heart's silent words"</div>
             </div>
             <div class="note">
                 <div class="note-pin"></div>
-                <div class="note-content">"You make my heart skip beats"</div>
+                <div class="note-content">"Every day with you is precious"</div>
             </div>
             <div class="note">
                 <div class="note-pin"></div>
@@ -823,6 +1017,9 @@
             <div class="kiss-signature">💋</div>
             <p style="margin-top: 20px; font-size: 1.2rem; color: var(--primary-pink);">
                 Made with infinite love for the most special person in my universe
+            </p>
+            <p style="margin-top: 10px; font-size: 1rem; color: var(--deep-pink);">
+                P.S. Thank you for every "Good Morning" and "Good Night" ❤️
             </p>
         </footer>
         
@@ -950,6 +1147,52 @@
             }, 300);
         }
         
+        // She Knows Me Well Messages
+        function showKnowledgeMessage(index) {
+            const messages = [
+                "You can tell when I'm genuinely happy or just pretending. Your eyes see through my soul.",
+                "You understand what I'm thinking even in my silence. You speak the language of my heart.",
+                "You know when my heart is speaking louder than my words ever could.",
+                "You sense exactly when I need your embrace, even when I don't say it."
+            ];
+            
+            // Create a beautiful popup message
+            const popup = document.createElement('div');
+            popup.style.position = 'fixed';
+            popup.style.top = '50%';
+            popup.style.left = '50%';
+            popup.style.transform = 'translate(-50%, -50%)';
+            popup.style.background = 'linear-gradient(135deg, var(--deep-pink), var(--primary-pink))';
+            popup.style.color = 'white';
+            popup.style.padding = '30px';
+            popup.style.borderRadius = '20px';
+            popup.style.zIndex = '10000';
+            popup.style.textAlign = 'center';
+            popup.style.boxShadow = '0 20px 50px rgba(0,0,0,0.3)';
+            popup.style.maxWidth = '80%';
+            popup.style.fontSize = '1.3rem';
+            popup.style.fontFamily = "'Dancing Script', cursive";
+            popup.innerHTML = `
+                <div style="font-size: 3rem; margin-bottom: 15px;">💖</div>
+                ${messages[index - 1]}
+                <div style="margin-top: 20px; font-size: 1rem; opacity: 0.8;">Tap anywhere to close</div>
+            `;
+            
+            document.body.appendChild(popup);
+            
+            // Close on click
+            popup.addEventListener('click', function() {
+                this.remove();
+            });
+            
+            // Auto-close after 5 seconds
+            setTimeout(() => {
+                if (document.body.contains(popup)) {
+                    popup.remove();
+                }
+            }, 5000);
+        }
+        
         // Music Player
         const playBtn = document.getElementById('playBtn');
         const birthdaySong = document.getElementById('birthdaySong');
@@ -993,6 +1236,17 @@
                 setTimeout(() => {
                     this.style.zIndex = '1';
                 }, 500);
+            });
+        });
+        
+        // Knowledge item hover effect
+        document.querySelectorAll('.knowledge-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
             });
         });
         
